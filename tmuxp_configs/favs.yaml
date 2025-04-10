@@ -1,0 +1,17 @@
+session_name: favs
+windows:
+  - window_name: nvim
+    shell_command_before:
+      - z favs
+      - conda activate favs
+    panes:
+      - nvim .
+  - window_name: procs
+    layout: tiled
+    shell_command_before:
+      - z favs
+      - cd favorites
+      - conda activate favs
+    panes:
+      - python manage.py runserver
+ 
